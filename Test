@@ -1,0 +1,9 @@
+<?php
+$dom = new DomDocument
+$dom->loadHTMLFile("http://www.jagatreview.com/2014/04/apple-rekrut-disainer-jam-untuk-membuat-macbook-air/");
+$xpath = new DomXPath($dom);
+$judul = $xpath->query("html/body/div[5]/div[2]/div/div[1]/section/div[1]/p[1]/text()[2]");
+foreach ($judul as $jdl) {
+    echo $jdl->nodeValue;
+}
+?>
